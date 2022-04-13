@@ -4,6 +4,9 @@ namespace DarkNukeExtensions
 {
     public static class MSBuildSettingsExtensions
     {
+        /// <summary>
+        /// Publish an Android app bundle
+        /// </summary>
         public static MSBuildSettings PublishAndroidApp(this MSBuildSettings o, AndroidPublishSettings settings)
         {
             //TODO validate settings
@@ -17,6 +20,9 @@ namespace DarkNukeExtensions
             return o;
         }
 
+        /// <summary>
+        /// Publish an iOS IPA package
+        /// </summary>
         public static MSBuildSettings PublishIosApp(this MSBuildSettings o, IosPublishSettings settings)
         {
             //TODO validate settings

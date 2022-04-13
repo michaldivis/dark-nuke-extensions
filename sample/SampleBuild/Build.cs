@@ -58,7 +58,7 @@ class Build : NukeBuild
     Target CleanAndroid => _ => _
         .Executes(() =>
         {
-            DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.Android"));
+            DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.Android"), retryCount: 3);
         });
 
     Target Android => _ => _
@@ -82,7 +82,7 @@ class Build : NukeBuild
     Target CleaniOS => _ => _
         .Executes(() =>
         {
-            DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.iOS"));
+            DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.iOS"), retryCount: 3);
         });
 
     Target iOS => _ => _

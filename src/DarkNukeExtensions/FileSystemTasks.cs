@@ -7,6 +7,9 @@ namespace DarkNukeExtensions
 {
     public static class FileSystemTasks
     {
+        /// <summary>
+        /// Tries to delete the bin and obj directories of a project (with retries)
+        /// </summary>
         public static void DeleteBinAndObjDirectories(Project project, int retryCount = 3)
         {
             //TODO guard inputs

@@ -5,6 +5,9 @@ namespace DarkNukeExtensions
 {
     public static class VerbosityExtensions
     {
+        /// <summary>
+        /// Map the <see cref="Verbosity" /> to <see cref="MSBuildVerbosity" />
+        /// </summary>
         public static MSBuildVerbosity ToMSBuildVerbosity(this Verbosity verbosity)
         {
             return verbosity switch
