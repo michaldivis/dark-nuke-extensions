@@ -3,7 +3,7 @@ using System.IO;
 
 namespace DarkNukeExtensions;
 
-public static class FileSystemValidations
+internal static class FileSystemValidations
 {
     public static bool IsValidCsprojFilePath(string? path)
     {
