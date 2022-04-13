@@ -5,7 +5,7 @@ namespace DarkNukeExtensions;
 
 public static class FileSystemValidations
 {
-    public static bool IsValidExistingCsprojFile(string? path)
+    public static bool IsValidCsprojFilePath(string? path)
     {
         if (string.IsNullOrEmpty(path))
         {

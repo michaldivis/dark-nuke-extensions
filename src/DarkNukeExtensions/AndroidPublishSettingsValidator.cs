@@ -9,7 +9,7 @@ public class AndroidPublishSettingsValidator : AbstractValidator<AndroidPublishS
         RuleFor(a => a.TargetPath)
             .Custom((targetPath, context) =>
             {
-                if (!FileSystemValidations.IsValidExistingCsprojFile(targetPath))
+                if (!FileSystemValidations.IsValidCsprojFilePath(targetPath))
                 {
                     context.AddFailure("Target path has to be a valid .csproj file path");
                 }

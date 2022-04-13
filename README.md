@@ -46,7 +46,7 @@ For whatever reason, the Xamarin.Android `bin` and `obj` folders would sometimes
 ```csharp
 using static DarkNukeExtensions.FileSystemTasks;
 
-DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.Android"), retryCount: 3);
+DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.Android").Directory, retryCount: 3);
 ```
 
 ## Verbosity mapping
