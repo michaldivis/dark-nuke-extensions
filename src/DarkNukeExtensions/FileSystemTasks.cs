@@ -2,6 +2,8 @@
 using Serilog;
 using System;
 using System.IO;
+using Ardalis.GuardClauses;
+using Nuke.Common.IO;
 
 namespace DarkNukeExtensions
 {
@@ -10,12 +12,13 @@ namespace DarkNukeExtensions
         /// <summary>
         /// Tries to delete the bin and obj directories of a project (with retries)
         /// </summary>
-        public static void DeleteBinAndObjDirectories(Project project, int retryCount = 3)
+        public static void DeleteBinAndObjDirectories(AbsolutePath projectDirectory, int retryCount = 3)
         {
-            //TODO guard inputs
+            Guard.Against.NullOrEmpty(projectDirectory);
+            Guard.Against.NegativeOrZero(retryCount);
 
-            TryDeleteDirectory(project.Directory / "bin", retryCount);
-            TryDeleteDirectory(project.Directory / "obj", retryCount);
+            TryDeleteDirectory(projectDirectory / "bin", retryCount);
+            TryDeleteDirectory(projectDirectory / "obj", retryCount);
         }
 
         private static void TryDeleteDirectory(string dirPath, int retryCount = 3)

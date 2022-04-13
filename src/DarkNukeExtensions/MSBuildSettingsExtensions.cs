@@ -4,12 +4,20 @@ namespace DarkNukeExtensions
 {
     public static class MSBuildSettingsExtensions
     {
+        private static AndroidPublishSettingsValidator? _androidPublishSettingsValidator;
+        private static AndroidPublishSettingsValidator GetAndroidPublishSettingsValidator() => _androidPublishSettingsValidator ??= new AndroidPublishSettingsValidator();
+
         /// <summary>
         /// Publish an Android app bundle
         /// </summary>
         public static MSBuildSettings PublishAndroidApp(this MSBuildSettings o, AndroidPublishSettings settings)
         {
-            //TODO validate settings
+            var validation = GetAndroidPublishSettingsValidator().Validate(settings);
+
+            if (!validation.IsValid)
+            {
+                throw new SettingsValidationException(validation.Errors);
+            }
 
             o.SetTargetPath(settings.TargetPath)
                .EnableRestore()
@@ -20,12 +28,20 @@ namespace DarkNukeExtensions
             return o;
         }
 
+        private static IosPublishSettingsValidator? _iosPublishSettingsValidator;
+        private static IosPublishSettingsValidator GetIosPublishSettingsValidator() => _iosPublishSettingsValidator ??= new IosPublishSettingsValidator();
+
         /// <summary>
         /// Publish an iOS IPA package
         /// </summary>
         public static MSBuildSettings PublishIosApp(this MSBuildSettings o, IosPublishSettings settings)
         {
-            //TODO validate settings
+            var validation = GetIosPublishSettingsValidator().Validate(settings);
+
+            if (!validation.IsValid)
+            {
+                throw new SettingsValidationException(validation.Errors);
+            }
 
             o.SetTargetPath(settings.TargetPath)
                 .EnableRestore()

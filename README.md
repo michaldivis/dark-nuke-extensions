@@ -1,3 +1,5 @@
+<img src="https://github.com/michaldivis/dark-nuke-extensions/blob/v0.1.0-alpha/assets/icon.png?raw=true" width="100">
+
 # Dark NUKE Extensions
 
 A set of helper methods for publishing [Xamarin.Forms](https://xamarin.com/forms) Android and iOS apps using the [NUKE build system](https://nuke.build/).
@@ -38,21 +40,21 @@ MSBuild(o => o.PublishIosApp(new IosPublishSettings
     }));
 ```
 
-## Cleaning the bin and obj folders
+## Cleaning the `bin` and `obj` folders
 For whatever reason, the Xamarin.Android `bin` and `obj` folders would sometimes fail to be deleted when using the regular methods for deleting directories provided by Nuke. This method is a simple hard delete with a retry policy and it seems to work better for this purpose.
 
 ```csharp
 using static DarkNukeExtensions.FileSystemTasks;
 
-DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.Android"), retryCount: 3);
+DeleteBinAndObjDirectories(Solution.GetProject("SampleApp.Android").Directory, retryCount: 3);
 ```
 
 ## Verbosity mapping
-Simple mapping of the Nuke `Verbosity` enum to `MSBuildVerbosity`.
+Simple mapping of the Nuke `Verbosity` enum to `MSBuildVerbosity`. Nuke accepts a verbosity parameter by default, that parameter is stored in the `Verbosity` property. Use this method in order to pass the verbosity setting to MSBuild.
 
 ```csharp
 using DarkNukeExtensions;
 
 Verbosity verbosity = Verbosity.Normal;
-var msBuildVerbosity = verbosity.ToMSBuildVerbosity();
+MSBuildVerbosity msBuildVerbosity = verbosity.ToMSBuildVerbosity();
 ```

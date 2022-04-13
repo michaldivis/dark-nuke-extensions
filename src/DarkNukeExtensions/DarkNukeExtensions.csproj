@@ -17,7 +17,7 @@
 	  <PackageReleaseNotes></PackageReleaseNotes>
 	  <PackageTags>nuke-build, xamarin-forms</PackageTags>
 	  <NeutralLanguage>en-US</NeutralLanguage>
-	  <Version>0.1.0-alpha</Version>
+	  <Version>0.2.0-alpha</Version>
 	  <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
@@ -29,6 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.0.1" />
+    <PackageReference Include="FluentValidation" Version="10.4.0" />
     <PackageReference Include="Nuke.Common" Version="6.0.0" />
   </ItemGroup>
 
