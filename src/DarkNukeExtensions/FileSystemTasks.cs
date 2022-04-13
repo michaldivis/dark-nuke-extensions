@@ -12,6 +12,8 @@ namespace DarkNukeExtensions
         /// <summary>
         /// Tries to delete the bin and obj directories of a project (with retries)
         /// </summary>
+        /// <exception cref="ArgumentException" />
+        /// <exception cref="ArgumentNullException" />
         public static void DeleteBinAndObjDirectories(AbsolutePath projectDirectory, int retryCount = 3)
         {
             Guard.Against.NullOrEmpty(projectDirectory);

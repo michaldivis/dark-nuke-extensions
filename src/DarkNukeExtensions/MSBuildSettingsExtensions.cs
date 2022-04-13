@@ -10,6 +10,7 @@ namespace DarkNukeExtensions
         /// <summary>
         /// Publish an Android app bundle
         /// </summary>
+        /// <exception cref="SettingsValidationException" />
         public static MSBuildSettings PublishAndroidApp(this MSBuildSettings o, AndroidPublishSettings settings)
         {
             var validation = GetAndroidPublishSettingsValidator().Validate(settings);
@@ -34,6 +35,7 @@ namespace DarkNukeExtensions
         /// <summary>
         /// Publish an iOS IPA package
         /// </summary>
+        /// <exception cref="SettingsValidationException" />
         public static MSBuildSettings PublishIosApp(this MSBuildSettings o, IosPublishSettings settings)
         {
             var validation = GetIosPublishSettingsValidator().Validate(settings);
