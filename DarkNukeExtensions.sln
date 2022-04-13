@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkNukeExtensions", "src\DarkNukeExtensions\DarkNukeExtensions.csproj", "{4BDF0924-5A24-4F38-B51B-23A49652C132}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DarkNukeExtensions", "src\DarkNukeExtensions\DarkNukeExtensions.csproj", "{4BDF0924-5A24-4F38-B51B-23A49652C132}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2354E639-AF04-4A3B-92FF-CD9DA596162C}"
 EndProject
@@ -13,12 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.Android", "sample
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.iOS", "sample\SampleApp\SampleApp.iOS\SampleApp.iOS.csproj", "{740E6E43-8AA4-4602-9EF2-B65B47B3AA96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "sample\SampleApp\SampleApp\SampleApp.csproj", "{282DC7BA-CEEA-4D5C-BF1D-B1BCCC8F5996}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp", "sample\SampleApp\SampleApp\SampleApp.csproj", "{282DC7BA-CEEA-4D5C-BF1D-B1BCCC8F5996}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3A63126-2CB3-4DD4-ADFB-957CF12663D4}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_sampleBuild", "sample\sampleBuild\_sampleBuild.csproj", "{9B5AE033-2D2D-4F80-99E4-49115DBA924F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +86,16 @@ Global
 		{282DC7BA-CEEA-4D5C-BF1D-B1BCCC8F5996}.Release|iPhone.Build.0 = Release|Any CPU
 		{282DC7BA-CEEA-4D5C-BF1D-B1BCCC8F5996}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{282DC7BA-CEEA-4D5C-BF1D-B1BCCC8F5996}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Release|iPhone.Build.0 = Release|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +105,7 @@ Global
 		{97AA1A9C-235C-4293-AE8C-FCF426E4078C} = {3D286D94-5DBD-42C0-8978-DD7122F4C02A}
 		{740E6E43-8AA4-4602-9EF2-B65B47B3AA96} = {3D286D94-5DBD-42C0-8978-DD7122F4C02A}
 		{282DC7BA-CEEA-4D5C-BF1D-B1BCCC8F5996} = {3D286D94-5DBD-42C0-8978-DD7122F4C02A}
+		{9B5AE033-2D2D-4F80-99E4-49115DBA924F} = {3D286D94-5DBD-42C0-8978-DD7122F4C02A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8BFD73B-47C2-4100-8D3E-A12770745C8A}
