@@ -5,6 +5,29 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageId>Divis.DarkNukeExtensions</PackageId>
+
+	  <Authors>Michal Diviš</Authors>
+	  <Description>A set of helper methods for publishing Xamarin.Forms Android and iOS apps using the NUKE build system.</Description>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageProjectUrl>https://github.com/michaldivis/dark-nuke-extensions</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/michaldivis/dark-nuke-extensions</RepositoryUrl>
+	  <PackageReleaseNotes></PackageReleaseNotes>
+	  <PackageTags>nuke-build, xamarin-forms</PackageTags>
+	  <NeutralLanguage>en-US</NeutralLanguage>
+	  <Version>0.1.0-alpha</Version>
+	  <PackageIcon>icon.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="6.0.0" />
   </ItemGroup>
