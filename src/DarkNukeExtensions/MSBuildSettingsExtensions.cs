@@ -20,13 +20,13 @@ namespace DarkNukeExtensions
                 throw new SettingsValidationException(validation.Errors);
             }
 
-            o.SetTargetPath(settings.TargetPath)
+            return o
+               .SetTargetPath(settings.TargetPath)
                .EnableRestore()
                .SetVerbosity(settings.Verbosity)
                .SetTargets("SignAndroidPackage")
                .SetOutDir(settings.OutDir)
                .SetConfiguration(settings.Configuration);
-            return o;
         }
 
         private static IosPublishSettingsValidator? _iosPublishSettingsValidator;
@@ -45,7 +45,8 @@ namespace DarkNukeExtensions
                 throw new SettingsValidationException(validation.Errors);
             }
 
-            o.SetTargetPath(settings.TargetPath)
+            return o
+                .SetTargetPath(settings.TargetPath)
                 .EnableRestore()
                 .SetVerbosity(settings.Verbosity)
                 .AddProperty("Platform", "iPhone")
@@ -58,7 +59,6 @@ namespace DarkNukeExtensions
                 .AddProperty("ContinueOnDisconnected", "false")
                 .SetTargets("Build")
                 .SetConfiguration(settings.Configuration);
-            return o;
         }
     }
 }
