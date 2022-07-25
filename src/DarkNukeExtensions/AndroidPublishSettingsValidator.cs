@@ -2,7 +2,7 @@
 
 namespace DarkNukeExtensions;
 
-public class AndroidPublishSettingsValidator : AbstractValidator<AndroidPublishSettings>
+internal class AndroidPublishSettingsValidator : AbstractValidator<AndroidPublishSettings>
 {
     public AndroidPublishSettingsValidator()
     {

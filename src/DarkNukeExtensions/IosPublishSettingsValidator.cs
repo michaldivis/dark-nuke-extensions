@@ -2,7 +2,7 @@
 
 namespace DarkNukeExtensions;
 
-public class IosPublishSettingsValidator : AbstractValidator<IosPublishSettings>
+internal class IosPublishSettingsValidator : AbstractValidator<IosPublishSettings>
 {
     public IosPublishSettingsValidator()
     {
